@@ -8,6 +8,38 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+  <style>
+    /* Fix Hero Container Overlap */
+    .hero {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 30px !important;
+      box-sizing: border-box !important;
+    }
+
+    .hero-copy {
+      flex: 1 1 450px !important;
+      max-width: 600px !important;
+      width: 100% !important;
+    }
+
+    .hero-card {
+      flex: 1 1 350px !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Fix Leaflet Map Overflow */
+    #heroMap {
+      width: 100% !important;
+      height: 300px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+  </style>
 <body>
   <header class="navbar">
     <a class="brand" href="#home">
