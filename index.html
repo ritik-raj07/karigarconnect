@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KarigarConnect / कारीगरकनेक्ट</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">
+      <div class="brand-mark">KC</div>
+      <div><strong>KarigarConnect</strong><small>Kaam ka sahi saathi / काम का सही साथी</small></div>
+    </a>
+    <nav>
+      <a href="#home">Home / होम</a>
+      <a href="#services">Services / सेवाएँ</a>
+      <a href="#how">How it works / कैसे काम करता है</a>
+      <a href="#contact">Contact / संपर्क</a>
+    </nav>
+    <button class="btn btn-light" onclick="openLogin()">Join Us / जुड़ें</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Trusted local workers / भरोसेमंद स्थानीय कामगार</span>
+        <h1>Kaam chahiye? <span>KarigarConnect</span> par dhoondhiye.</h1>
+        <p>Labour, carpenter, electrician, plumber, driver, househelp aur skilled professionals ko apni locality mein book karein.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openCustomer()">Find a Worker / कामगार खोजें</button>
+          <button class="btn btn-outline" onclick="openWorker()">Join as Worker / कामगार बनें</button>
+        </div>
+        <div class="trust-row">
+          <span>✓ Local matching / स्थानीय मिलान</span>
+          <span>✓ Transparent wage / साफ़ मजदूरी</span>
+          <span>✓ Easy payment / आसान भुगतान</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-map" id="heroMap"></div>
+        <div class="location-chip">📍 Noida & nearby / नोएडा व आसपास</div>
+        <div class="availability"><span class="dot"></span> Workers available now / अभी कामगार उपलब्ध</div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Services / सेवाएँ</span>
+          <h2>Har kaam ke liye ek trusted professional.</h2>
+        </div>
+        <button class="text-btn" onclick="openCustomer()">View & Book / देखें और बुक करें →</button>
+      </div>
+      <div id="serviceGrid" class="service-grid"></div>
+    </section>
+
+    <section id="how" class="section soft">
+      <div class="section-head centered">
+        <span class="eyebrow">Simple process / आसान प्रक्रिया</span>
+        <h2>3 steps mein booking.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>Choose service / सेवा चुनें</h3><p>Apni locality aur kaam select karein.</p></div>
+        <div class="step"><b>02</b><h3>Compare workers / कामगार चुनें</h3><p>Rating, wage, distance aur availability dekhein.</p></div>
+        <div class="step"><b>03</b><h3>Book & pay / बुक और भुगतान</h3><p>Time, location, wage aur payment confirm karein.</p></div>
+      </div>
+    </section>
+
+    <section class="section split-section">
+      <div>
+        <span class="eyebrow">For workers / कामगारों के लिए</span>
+        <h2>Apna kaam, apni locality, apna schedule.</h2>
+        <p>Worker / कामगार profile banayein, 9 AM–6 PM availability set karein aur nearby bookings receive karein.</p>
+        <ul class="check-list">
+          <li>9 AM–6 PM working window / कार्य समय</li>
+          <li>Tiffin break included / टिफिन ब्रेक शामिल</li>
+          <li>Rating-based payout / रेटिंग आधारित भुगतान</li>
+          <li>Nearby travel expense / स्थानीय यात्रा खर्च</li>
+        </ul>
+        <button class="btn btn-primary" onclick="openWorker()">Worker Login / कामगार लॉगिन</button>
+      </div>
+      <div class="info-card">
+        <h3>Smart booking / स्मार्ट बुकिंग</h3>
+        <p>Request accept na hone par system next nearby worker ko request switch karta hai.</p>
+        <div class="timer-demo"><strong>20–25 min</strong><span>acceptance window / स्वीकृति समय</span></div>
+        <small>Demo mein ye timer 20 seconds par fast-forward kiya gaya hai.</small>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <span class="eyebrow">Contact / संपर्क</span>
+        <h2>Need help? Baat kijiye.</h2>
+        <p>Booking, worker registration ya collaboration ke liye humse contact karein.</p>
+        <div class="contact-lines">
+          <a href="tel:8292292822">☎ 8292292822</a>
+          <a href="mailto:ayush12@gmail.com">✉ ayush12@gmail.com</a>
+        </div>
+      </div>
+      <div id="contactMap" class="map"></div>
+    </section>
+  </main>
+
+  <footer>© 2026 KarigarConnect / कारीगरकनेक्ट — Local work, trusted people / स्थानीय काम, भरोसेमंद लोग.</footer>
+
+  <div id="modalRoot"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
