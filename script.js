@@ -29,7 +29,7 @@ function renderServices(){
       <div class="service-icon">${s.icon}</div>
       <h3>${s.en} / ${s.hi}</h3>
       <p>Nearby professional / नज़दीकी प्रोफेशनल</p>
-      <div class="rate">${money(s.hr)}/hr · ${money(s.day)}/day</div>
+      <div class="rate">${money(s.hr)}/hr - ${money(s.day)}/day</div>
     </div>`).join("");
 }
 
